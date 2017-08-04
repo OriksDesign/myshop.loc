@@ -1,6 +1,9 @@
 index.php
 
 <?php
+include_once '../config/config.php'; //инициализация настроек
+include_once '../lib/mainFunction.php'; //основные функции
+
  //say name controller for work
 $controllerName=isset($_GET['controller'])?ucfirst($_GET['controller']):'Index';
 echo "Connect php file (Controller) = " . $controllerName . "<br>";
@@ -17,12 +20,5 @@ echo "function build article (Action) = " . $actionName . "<br>";
 //$function();
 
 
-function loadPage($controllerName, $actionName='Index')
-{
-	# code...
-	include_once PathPrefix . $controllerName . PathPostfix;
-	$function=$actionName . 'Action';
-	$function();
-}
 loadPage($controllerName, $actionName);
 ?>
