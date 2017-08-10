@@ -1,2 +1,3 @@
 # myshop.loc
-test php 
+learn php 
+
